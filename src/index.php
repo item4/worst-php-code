@@ -25,6 +25,10 @@ Hello <?=$user[name]?>!<br>
 if ($user) {
 ?>
 <hr>
+<form action="upload.php" method="post" enctype="multipart/form-data">
+<input type="file" name="upload"><br>
+<button>Upload</button>
+</form>
 <ul>
 <?php
 $query = mysql_query("select * from users order by id", $c);
