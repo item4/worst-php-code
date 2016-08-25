@@ -11,7 +11,7 @@ include 'common.php';
 <?php
 if ($user) {
 ?>
-Hello <?=$user['name']?>!<br>
+Hello <?=$user[name]?>!<br>
 <a href="logout.php">Logout</a>
 <?php
 } else {
