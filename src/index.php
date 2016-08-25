@@ -32,5 +32,19 @@ while($row = mysql_fetch_array($query))
 }
 ?>
 </ul>
+<ul>
+<?php
+if (!$owner) {
+    $owner = $user[id];
+}
+$file_list = `ls $owner`;
+$files = explode("\n", $file_list);
+for ($i = 0; $i < count($files); $i++) {
+?>
+    <li><a href="./download.php?owner=<?=$owner?>&amp;filename=<?=rawurlencode($files[$i])?>"><?=files[$i]?></a></li>
+<?php
+}
+?>
+</ul>
 </body>
 </html>
