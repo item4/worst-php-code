@@ -1,8 +1,6 @@
 <?php
 include "common.php";
 
-$passphrase = md5($passphrase);
-
 $user = mysql_fetch_array(
     mysql_query(
         "select * from users where email = '$email' " .

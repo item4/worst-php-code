@@ -17,8 +17,6 @@ if ($check[0] > 0) {
     die("이미 가입된 E-mail 주소");
 }
 
-$passphrase = md5($passphrase);
-
 mysql_query(
     "insert into users (email, passphrase, name) " .
     "values ('$email', '$passphrase', '$name');",
