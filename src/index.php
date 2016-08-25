@@ -21,6 +21,9 @@ Hello <?=$user[name]?>!<br>
 <?php
 }
 ?>
+<?php
+if ($user) {
+?>
 <hr>
 <ul>
 <?php
@@ -46,5 +49,8 @@ for ($i = 0; $i < count($files); $i++) {
 }
 ?>
 </ul>
+<?php
+}
+?>
 </body>
 </html>
