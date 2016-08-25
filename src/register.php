@@ -20,7 +20,8 @@ if ($check[0] > 0) {
 $passphrase = md5($passphrase);
 
 mysql_query(
-    "insert into users (email, passphrase) values ('$email', '$passphrase');",
+    "insert into users (email, passphrase, name) " .
+    "values ('$email', '$passphrase', '$name');",
     $c
 );
 
