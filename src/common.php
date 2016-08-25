@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 $c = mysql_connect("localhost", "user", "password");
 mysql_select_db("dbname", $c);

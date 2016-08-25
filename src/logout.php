@@ -2,7 +2,7 @@
 include "common.php";
 
 if ($user) {
-    session_unregister("logged_id");
+    setcookie("logged_id", "");
 }
 
 header("location: ./");

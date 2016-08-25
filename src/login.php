@@ -13,7 +13,7 @@ $user = mysql_fetch_array(
 
 if ($user) {
     $logged_id = $user[id];
-    session_register("logged_id");
+    setcookie("logged_id", $logged_id);
     header("location: ./");
 } else {
     die("그런 사용자 없다");
