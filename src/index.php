@@ -21,5 +21,16 @@ Hello <?=$user[name]?>!<br>
 <?php
 }
 ?>
+<hr>
+<ul>
+<?php
+$query = mysql_query("select * from users order by id", $c);
+while($row = mysql_fetch_array($query))
+?>
+    <li><a href="./?owner=<?=$row[id]?>"><?=$row[name]?>&apos;s file list</a></li>
+<?php
+}
+?>
+</ul>
 </body>
 </html>
