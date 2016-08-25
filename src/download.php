@@ -1,4 +1,4 @@
-<?php
+<?
 include "common.php";
 
 if (!$user) {
@@ -14,3 +14,4 @@ while (!feof($f)) {
 }
 
 mysql_close($c);
+?>

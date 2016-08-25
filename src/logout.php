@@ -1,4 +1,4 @@
-<?php
+<?
 include "common.php";
 
 if ($user) {
@@ -7,3 +7,4 @@ if ($user) {
 
 header("location: ./");
 mysql_close($c);
+?>

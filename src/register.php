@@ -1,4 +1,4 @@
-<?php
+<?
 include "common.php";
 
 if ($email != $email_confirm) {
@@ -28,3 +28,4 @@ mkdir("./" . mysql_insert_id($c));
 echo "가입완료. <a href=\"./login_form.php\">로그인 페이지</a>에서 로그인 하세요.";
 
 mysql_close($c);
+?>

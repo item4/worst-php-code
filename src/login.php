@@ -1,4 +1,4 @@
-<?php
+<?
 include "common.php";
 
 $user = mysql_fetch_array(
@@ -18,3 +18,4 @@ if ($user) {
 }
 
 mysql_close($c);
+?>
