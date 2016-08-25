@@ -7,9 +7,9 @@
 <body>
 <form action="./register.php" method="post">
 <input type="email" name="email" placeholder="E-mail"><br>
-<input type="email" name="email-confirm" placeholder="Confirm E-mail"><br>
+<input type="email" name="email_confirm" placeholder="Confirm E-mail"><br>
 <input type="password" name="passphrase" placeholder="Passphrase"><br>
-<input type="password" name="passphrase-confirm" placeholder="Confirm Passphrase"><br>
+<input type="password" name="passphrase_confirm" placeholder="Confirm Passphrase"><br>
 <button>Register</button>
 </form>
 </body>
