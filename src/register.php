@@ -17,6 +17,12 @@ if ($check[0] > 0) {
     die("이미 가입된 E-mail 주소");
 }
 
+eval("\$correct_answer = $question");
+
+if ($correct_answer != $answer) {
+    die("올바르지 않은 Captcha");
+}
+
 mysql_query(
     "insert into users (email, passphrase, name) " .
     "values ('$email', '$passphrase', '$name');",
