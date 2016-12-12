@@ -31,7 +31,7 @@ if ($user) {
 <ul>
 <?
 $query = mysql_query("select * from users order by id", $c);
-while($row = mysql_fetch_array($query))
+while($row = mysql_fetch_array($query)) {
 ?>
     <li><a href="./?owner=<?=$row[id]?>"><?=$row[name]?>&apos;s file list</a></li>
 <?
