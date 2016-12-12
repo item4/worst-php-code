@@ -1,11 +1,24 @@
 <?
 include "common.php";
+if (!$owner) {
+    $owner = $user[id];
+}
+if (!$owner) {
+    $owner = 0;
+}
+include "color_setting/$owner.inc";
 ?>
 <!doctype html>
 <html>
 <head>
     <title>Worst PHP Code</title>
     <meta charset="utf-8">
+    <style>
+        body {
+            background: <?=$background?>;
+            color: <?=$color?>;
+        }
+    </style>
 </head>
 <body>
 <?
@@ -40,9 +53,6 @@ while($row = mysql_fetch_array($query)) {
 </ul>
 <ul>
 <?
-if (!$owner) {
-    $owner = $user[id];
-}
 $file_list = `ls $owner`;
 $files = explode("\n", $file_list);
 for ($i = 0; $i < count($files); $i++) {

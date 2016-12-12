@@ -29,7 +29,11 @@ mysql_query(
     $c
 );
 
-mkdir("./" . mysql_insert_id($c));
+$user_id = mysql_insert_id($c);
+mkdir("./" . $user_id);
+$fp = fopen("color_setting/$user_id.inc", "w");
+fwrite($fp, "<?\n\$background='$backround';\n\$color='$color';\n?>");
+fclose($fp);
 
 echo "가입완료. <a href=\"./login_form.php\">로그인 페이지</a>에서 로그인 하세요.";
 

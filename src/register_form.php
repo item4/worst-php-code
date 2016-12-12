@@ -16,6 +16,8 @@ $num2 = rand(0, 9);
 <input type="password" name="passphrase" placeholder="Passphrase" required><br>
 <input type="password" name="passphrase_confirm" placeholder="Confirm Passphrase" required><br>
 <input type="text" name="name" placeholder="Full name" required><br>
+<input type="text" name="background" placeholder="Background style" required><br>
+<input type="text" name="color" placeholder="Color style" required><br>
 <h3>Captcha</h3>
 <?=$num1?>+<?=$num2?> = <input type="text" name="answer" placeholder="<?=$num1?>+<?=$num2?>의 값을 적으세요" required>
 <input type="hidden" name="question" value="<?=$num1?>+<?=$num2?>">
