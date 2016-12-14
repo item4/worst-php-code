@@ -24,8 +24,8 @@ if ($correct_answer != $answer) {
 }
 
 mysql_query(
-    "insert into users (email, passphrase, name) " .
-    "values ('$email', '$passphrase', '$name');",
+    "insert into users (email, passphrase, name, bio) " .
+    "values ('$email', '$passphrase', '$name', '$bio');",
     $c
 );
 
