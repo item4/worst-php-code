@@ -5,6 +5,10 @@ if ($email != $email_confirm) {
     die("E-mail 주소 확인칸이 일치하지 않음");
 }
 
+if (strlen($password) > 12) {
+    die("비밀번호가 너무 김");
+}
+
 if ($passphrase != $passphrase_confirm) {
     die("비밀번호 확인칸이 일치하지 않음");
 }

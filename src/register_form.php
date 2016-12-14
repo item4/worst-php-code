@@ -13,8 +13,9 @@ $num2 = rand(0, 9);
 <h3>Required informations</h3>
 <input type="email" name="email" placeholder="E-mail" required><br>
 <input type="email" name="email_confirm" placeholder="Confirm E-mail" required><br>
-<input type="password" name="passphrase" placeholder="Passphrase" required><br>
-<input type="password" name="passphrase_confirm" placeholder="Confirm Passphrase" required><br>
+<input type="password" name="passphrase" placeholder="Passphrase" required maxlength="12"><br>
+<input type="password" name="passphrase_confirm" placeholder="Confirm Passphrase" required maxlength="12"><br>
+<p>비밀번호는 최대 12자를 넘길 수 없으며, ', or, update, --, join 등의 단어는 쓸 수 없습니다</p>
 <input type="text" name="name" placeholder="Full name" required><br>
 <textarea name="bio" placeholder="Bio"></textarea>
 <p>글 내용에 ', or, update, --, join 등의 단어는 쓸 수 없습니다</p>
